@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <title>Architects</title>
+  </head>
+
+  <body>
+    <!--Navbar area-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark nav-class">
+      <div class="container">
+        <a href="images/logo.png" class="navbar-logo">Architecture Page</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        ><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <!-- ms-auto is to push things right -->
+            <li class="nav-item">
+              <div class="nav-link">Home</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">About</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">Contact</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--show area-->
+   
+    <section class="forms-section">
+        <div class="container-fluid">
+            <h1> Welcome To The Architecture Portal </h1>
+            <a href="#needs-validate">
+            <button type="button" class="btn btn-outline-light btn-lg buttony">Register For Consultation</button>
+            </a>
+                <!-- <div>
+                    <h1> Architecture </h1>
+                </div>   -->
+                <!-- <img class="img-fluid magy"width="100%"src="images/architecture.jpg" alt="architecure image"/> -->
+            </div>
+        </div> 
+    </section>
+    <section class="pic-section">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="images/consultation.jpg" alt="consultation img"/>
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+    <form class="needs-validation" id="needs-validate" novalidate>
+        <div class="container form-container">
+            <div class="row">
+                <h2 class="mb-4">Registration Form</h2>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" placeholder="First name">
+                </div><br>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div><br>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email-id" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div class="invalid-feedback">Enter Correct Email Format</div>
+            </div><br>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pw-id" placeholder="Password">
+                <div class="invalid-feedback">Enter Password To Proceed</div>
+            </div><br>
+            <button type="submit" class="btn btn-success">Submit</button>
+        
+        </div>
+    </form><br><br>
+      <div class="table-responsive-md">
+        <div class="container">
+            <table class="table">
+                <h2 class="mb-4">User List</h2>
+
+                <thead>
+                    <tr>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shar</td>
+                        <td>Wone</td>
+                        <td>shar.one@wone.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div><br><br>
+      <footer class="container-fluid">
+        <div class="row">
+            <!-- Call the bootstrap classes here and not in css. -->
+             <!-- my-auto is 'margin' on 'y-axis' (top and bottom) -->
+            <div class="col-sm-6 d-flex justify-content-center my-auto copy-right">
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+            </div>
+        </div>
+    </footer>
+  <script>
+    (function(){
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms)
+        .forEach(function(form){
+            form.addEventListener('submit',function(event){
+                if(!form.checkValidity()){
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })()
+  </script>
+     
+  </body>
+</html>
